@@ -1,0 +1,2 @@
+zoyaggk@myubuntu:~$ cat /etc/issue
+Ubuntu 20.04.5 LTS /n /l
