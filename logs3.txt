@@ -1,0 +1,43 @@
+Задача 1.a
+
+zoyaggk@myubuntu:~$ sudo useradd -s -m /bin/bash user1
+
+Задача 1.б
+
+zoyaggk@myubuntu:~$ sudo tail -1 /etc/shadow
+user1:*:19511:0:99999:7:::
+
+Задача 1.с
+
+zoyaggk@myubuntu:~$ sudo userdel -rf user1
+
+Задача 2.а
+
+zoyaggk@myubuntu:~$ sudo groupadd students
+zoyaggk@myubuntu:~$ sudo groupadd mentors
+
+Задача 2.б
+
+zoyaggk@myubuntu:~$ sudo useradd -s -m /bin/bash student1
+zoyaggk@myubuntu:~$ sudo useradd -s -m /bin/bash mentor1
+zoyaggk@myubuntu:~$ sudo useradd -s -m /bin/bash student2
+zoyaggk@myubuntu:~$ sudo useradd -s -m /bin/bash mentor2
+zoyaggk@myubuntu:~$ sudo usermod -a -G student1 students
+zoyaggk@myubuntu:~$ sudo usermod -a -G student2 students
+zoyaggk@myubuntu:~$ sudo usermod -a -G mentor1 students
+zoyaggk@myubuntu:~$ sudo usermod -a -G mentor2 mentors
+zoyaggk@myubuntu:~$ sudo usermod -a -G mentor1 mentors
+
+Задача 2.с
+
+zoyaggk@myubuntu:~$ sudo usermod -G "" mentor1
+
+Задача 2.д
+
+zoyaggk@myubuntu:~$ sudo userdel -rf mentor1
+
+Задача 3.а
+
+zoyaggk@myubuntu:~$ sudo useradd -s -m /bin/bash superuser1
+zoyaggk@myubuntu:~$ sudo usermod -a -G sudo superuser1
+zoyaggk@myubuntu:~$ groups superuser1
