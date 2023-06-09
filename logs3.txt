@@ -41,3 +41,4 @@ zoyaggk@myubuntu:~$ sudo userdel -rf mentor1
 zoyaggk@myubuntu:~$ sudo useradd -s -m /bin/bash superuser1
 zoyaggk@myubuntu:~$ sudo usermod -a -G sudo superuser1
 zoyaggk@myubuntu:~$ groups superuser1
+sudo
