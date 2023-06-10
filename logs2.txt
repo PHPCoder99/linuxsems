@@ -1,0 +1,16 @@
+zoyaggk@myubuntu:~$ mkdir students
+zoyaggk@myubuntu:~$ mkdir mentors
+zoyaggk@myubuntu:~$ touch students/students_list.txt
+zoyaggk@myubuntu:~$ touch mentors/mentors_list.txt
+
+zoyaggk@myubuntu:~$ vim students/students_list.txt
+zoyaggk@myubuntu:~$ vim mentors/mentors_list.txt
+zoyaggk@myubuntu:~$ # i, вводим инфу, esc, :wq!
+
+zoyaggk@myubuntu:~$ mv mentors/mentors_list.txt students
+
+zoyaggk@myubuntu:~$ rm -r mentors
+
+zoyaggk@myubuntu:~$ mv students students_and_mentors
+
+zoyaggk@myubuntu:~$ rm -r students_and_mentors
