@@ -1,0 +1,20 @@
+zoyaggk@myubuntu:~$ echo "1"
+zoyaggk@myubuntu:~$ sudo apt install nginx
+zoyaggk@myubuntu:~$ echo "2"
+zoyaggk@myubuntu:~$ sudo apt install libapache2-mod-php php
+zoyaggk@myubuntu:~$ sudo apt install php-fpm
+zoyaggk@myubuntu:~$ cat /etc/php/7.0/fpm/pool.d/www.conf
+zoyaggk@myubuntu:~$ sudo nano /etc/nginx/sites-enables/default
+zoyaggk@myubuntu:~$ # fastcgi_pass unix:/run/php/php7.0-fpm.sock
+zoyaggk@myubuntu:~$ echo "3"
+zoyaggk@myubuntu:~$ sudo apt install apache2
+zoyaggk@myubuntu:~$ # change port to :9000 using /etc/apache2/apache2.conf and /etc/apache2/ports.conf files, forgot to copy this part sorry!
+zoyaggk@myubuntu:~$ sudo systemctl start apache2
+zoyaggk@myubuntu:~$ echo "4"
+zoyaggk@myubuntu:~$ echo "<?php phpinfo(); ?>" > /var/www/html/info.php
+zoyaggk@myubuntu:~$ echo "5"
+zoyaggk@myubuntu:~$ sudo nano /etc/nginx/sites-enables/default
+zoyaggk@myubuntu:~$ # proxy_pass http://localhost:9000;
+zoyaggk@myubuntu:~$ # proxy_set_header Host $host;
+zoyaggk@myubuntu:~$ # proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for
+zoyaggk@myubuntu:~$ # proxy_set_header X-Real-IP $remote_addr
